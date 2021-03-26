@@ -5,14 +5,14 @@
         <item name="android:layout_marginTop">36dp</item>
         <item name="android:layout_marginHorizontal" tools:targetApi="o">54dp</item>
         <item name="android:inputType">numberDecimal</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@android:color/holo_green_dark</item>
     </style>
 
     <style name="title_imc">
         <item name="android:textColor">@color/purple_500</item>
-        <item name="android:textSize">48sp</item>
         <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">48sp</item>
     </style>
 </resources>

@@ -1,45 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/titleImc"
+        style="@style/title_imc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="82dp"
         android:text="@string/hi_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/title_imc" />
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/alturaEDT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/calcAltura"
-        android:layout_width="match_parent"
+        android:id="@+id/alturaEDT"
+        style="@style/input_Style"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="129dp"
+        android:autofillHints=""
         android:hint="@string/t_altura"
-        style="@style/input_Style" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleImc" />
 
     <EditText
         android:id="@+id/calcPeso"
         style="@style/input_Style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/t_peso" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCalc"
-        android:backgroundTint="@color/purple_500"
-        android:text="@string/t_button"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginTop="46dp" />
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="66dp"
+        android:autofillHints=""
+        android:hint="@string/t_peso"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alturaEDT" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/purple_500"
+        android:padding="16dp"
+        android:text="@string/t_button"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcPeso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
